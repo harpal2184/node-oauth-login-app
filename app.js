@@ -5,6 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var stylus = require('stylus');
+var morgan = require('morgan');
+
+//config file for mongodb
+var config = require('./bin/config');
+var mongoose = require('mongoose');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -13,6 +19,15 @@ var login = require('./routes/login');
 var signup = require('./routes/signup');
 var app = express();
 
+var api = require('./bin/server-api');
+app.use('/api',api);
+mongoose.connect(config.database, function(err){
+	if(err){
+		console.log(err);
+	}else{
+		console.log("connected to mongodb");
+	}
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
