@@ -10,7 +10,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var main = require('./routes/main');
 var login = require('./routes/login');
-
+var signup = require('./routes/signup');
 var app = express();
 
 // view engine setup
@@ -30,6 +30,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/main', main);
 app.use('/login', login);
+app.use('/signup',signup);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
