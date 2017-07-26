@@ -6,7 +6,10 @@ html
     link(rel='stylesheet prefetch', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
     link(rel='stylesheet', href='../stylesheets/style.css')
   body
-    .wrapper
+    
+    div.container
+      div.url-link
+        a(href='/users/register') Register
       form.form-signin(method='post', action='/users/login')
         h2.form-signin-heading Please login
         input.form-control(type='text', name='username', placeholder='Username', required='', autofocus='')

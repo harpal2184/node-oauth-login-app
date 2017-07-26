@@ -3,23 +3,28 @@ html
     head
         meta(charset="UTF-8")
         title Material design sign up form
+        link(rel='stylesheet prefetch', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
         link(rel="stylesheet", href="../stylesheets/signup.css")
     body
-        #login-box
-            form(method="post", action="/users/register")
-                .left
-                    h1 Sign up
-                    input(type="text", name="username", placeholder="Username")
-                    input(type="text", name="email", placeholder="E-mail")
-                    input(type="password", name="password", placeholder="Password")
-                    input(type="password", name="password2", placeholder="Retype password")
-                    input(type="submit", name="signup_submit")
-            .right
-                span.loginwith
-                    | Sign in with
-                    br
-                    | social network
-                //button.social-signin.facebook Log in with facebook
-                //button.social-signin.twitter Log in with Twitter
-                //button.social-signin.google Log in with Google+
-            //.or OR
+        div.container
+            div.url-link
+                a(href='/users/login') Login
+
+            #login-box
+                form(method="post", action="/users/register")
+                    .left
+                        h1 Sign up
+                        input(type="text", name="username", placeholder="Username")
+                        input(type="text", name="email", placeholder="E-mail")
+                        input(type="password", name="password", placeholder="Password")
+                        input(type="password", name="password2", placeholder="Retype password")
+                        input(type="submit", name="signup_submit")
+                .right
+                    span.loginwith
+                        | Sign in with
+                        br
+                        | social network
+                    //button.social-signin.facebook Log in with facebook
+                    //button.social-signin.twitter Log in with Twitter
+                    //button.social-signin.google Log in with Google+
+                //.or OR

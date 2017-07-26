@@ -35,11 +35,8 @@ html(lang='en')
           a.navbar-brand(href='#') Project name
         #navbar.navbar-collapse.collapse
           form.navbar-form.navbar-right
-            .form-group
-              input.form-control(type='text', placeholder='Email')
-            .form-group
-              input.form-control(type='password', placeholder='Password')
-            button.btn.btn-success(type='submit') Sign in
+              a(href='/users/logout') Logout
+
         // /.navbar-collapse
     // Main jumbotron for a primary marketing message or call to action
     .jumbotron
